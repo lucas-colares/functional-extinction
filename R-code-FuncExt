@@ -18,7 +18,7 @@ write.table(tabDiet, file="fuzzy_diet.txt", sep="\t") #Export trait matrix
 kTab<-ktab.list.df(list(tabDiet)) #Prepares the fuzzy matrix to the calculation of Gower's distance 
 dist.fun<-dist.ktab(kTab, type=c("F"), option=c("scaledBYrange")) #Gower's distance
 
-abun.rel<-make_relative(as.matrix(abun)) #Distinctiveness index is suggested to be calculated with relative abundance of species by the authors that described the index (see Grenié, Denelle, Tucker, Munoz, & Violle, 2017 for more) 
+abun.rel<-make_relative(as.matrix(abun)) #Distinctiveness index is suggested to be calculated with relative abundance of species by the authors that described the index (see GreniÃ©, Denelle, Tucker, Munoz, & Violle, 2017 for more) 
 abun.rel<-as.matrix(abun.rel) #Turns relative abundance in a quadratic matrix object
 dist.fun<-as.matrix(dist.fun) #Turns Gower's distance in a quadratic matrix object
 spp<-as.matrix(spp) #Turns species occurrences in a quadratic matrix object
